@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 
 void main(){
   //video 12 1:30
+  //video 12 2:30 removed     DeviceOrientation.portraitDown
   SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown
+    DeviceOrientation.portraitUp
   ]);
   runApp(new MyApp());
 }
