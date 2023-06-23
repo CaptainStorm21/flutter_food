@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_food/screens/home_screen.dart';
 
+import 'conssts/theme_dark.dart';
+
 void main(){
   //video 12 1:30
   //video 12 2:30 removed     DeviceOrientation.portraitDown
@@ -18,11 +20,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     bool _isDark = true;
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: _isDark ? Colors.amber: Colors.red,
-        primarySwatch: Colors.blue,
-      ),
+      theme: Styles.themeData(true, context),
       home:  HomeScreen()
     );
   }
